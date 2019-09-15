@@ -1,0 +1,201 @@
+image: 'https://www.catster.com/wp-content/uploads/2016/03/cat-reads-book.jpg'
+description: |
+    A dictionary consists of a collection of key-value pairs. Each key-value pair maps the key to its associated value.
+    Dictionaries are Python’s implementation of an associative array.
+intro: |
+
+    <ul>
+    <li>
+    We want to package pieces of information (<em>create a <strong>collection</strong></em>) that we can then later bring back up (<em><strong>access</strong></em>) using an identifier (<em><strong>key</strong></em>).</li>
+
+    <li>
+    We can for instance, package the information for a student which includes their name, age and courses taken and then bring back up the <em><strong>value</strong></em> for all those identifiers.</li>
+
+    <li>
+    We could also package information for the student's pets where there is a dog and a cat called "Mary Puppins" and "JK Meowling" respectively.</li>
+
+    <li>
+    We can create a collection for most things we can gather data for. For instance, Arsenal is <em>located</em> in <i>London</i>, their <em>stadium</em> is called <i>The Emirates</i>, the team's <em>nickname</em> is <i>The Gunners</i>, the <em>mascot</em> is called <i>Gunnersaurus</i> and the <em>manager</em> is <i>Unai Emery</i>.</li>
+
+    <li>
+    Because this is our data we already know the keys to access all the values in our "Arsenal" collection.
+    </ul>
+
+
+
+sections:
+    - heading: 1.Identify keys
+    - body: What are the keys we can use to create a collection for the student mentioned above?
+#
+    - heading: 2.Associate values with keys
+    - body: Think of a hypothetical student and the values you could set for all the keys
+#
+    - heading: 3.Start gathering the data
+    - body: Write a comma separated list of the keys for our student.
+
+    - heading: 4.Package the data
+    - body: Edit the list to pair each key with it's associated value, using a colon (:) to separate the key from it's associated value
+
+    - heading: 5.Define "student" Dictionary
+    - body: "Create student variable and set it's value as our student dictionary definition.\n
+        You can define a dictionary by enclosing the comma-separated list of key-value pairs in curly braces ({}).
+
+        * If you created a _python list_ (in step 3 above) then just replace the square brackets with curly braces.\n
+        * If you created a normal list then make sure the each of the keys and the corresponding values are written as strings on either sides of the colon (:).\n
+        * If you had an array as the value for _courses_ then :clap::clap::muscle:"
+
+    - heading: 6.Inspect student dictionary
+    - body:
+        run the following lines to see the data and also the type<br/><br/>
+        <code>print( student )</code><br/>
+        <code>print( type( student ) )</code>
+
+    - heading: 7.Accessing values using keys
+    - body: We can retrieve each _value_ within the student dictionary by specifying the corresponding _key_ inside a square bracket
+
+        <br/><br/>
+        <code>value = student[key]</code>
+
+    - heading: 8.Access the student's courses
+    - body: Write some code to print out the value set for the student's courses within the student dictionary.
+
+    - heading: 9.Accessing a dictionary with a nonexistent key
+    - body: Run the following line of code.
+
+        <br/>
+        Python should _raise an exception_<br/><br/>
+        <code>print( student["phone"] )</code>
+
+    - heading: 10.Adding an entry to an existing dictionary
+    - body: We can add a new _value_ to the student dictionary by specifying the _new key_ inside a square bracket and then setting a value
+
+        <br/><br/>
+        <code>student[key] = value</code>
+
+    - heading: 11.Updating an entry to an existing dictionary
+    - body: We can update an entry using the _existing key_ corresponding to the _value_ we wish to update.
+        This is also the same way we added an entry to an existing dictionary.
+        The outcome is dependent on wether the key already exists in the dictionary.
+
+        <br/><br/>
+        <code>student[key] = value</code>
+
+    - heading: 12.Add an entry for the student's email
+    - body: Write some code to set the email to "address@student.email" in the student dictionary.
+
+    - heading: 13.Update the student's email
+    - body: "Write some code to do the following in sequence.\n
+        __note:__ each step in the sequence can be attempted several times without affecting the data except for one.
+
+        * <a href='#6' title='print the data and the data type'>inspect the student</a> dictionary\n
+        * access and print out the current value for email in the student dictionary\n
+        * update the value for email in the student dictionary to __new-email@student.email__.\n
+        * access and print out the current value for email in the student dictionary\n
+        * <a href='#6' title='print the data and the data type'>inspect the student</a> dictionary"
+
+    - heading: 14.Delete the student's phone
+    - body: Write some code to add an entry for _phone_ (555 - 1756319).<br/>
+        Verify the change by inspecting the data.<br/><br/>
+        Delete the data and then inspect the data for the effect of the change.<br/>
+        You can delete an entry using the __del__ statement while specifying the _key_ to be deleted.
+        <br/><br/><code>del student[key]</code>
+
+    - heading: 15.Defining an empty dictionary
+    - body: "We can do this in a number of ways that produce the same result.<br/><br/>
+            <code>dict_a = {}</code><br/><br/>
+         _- curly brackets_ <br/><br/>
+            <code>dict_b = dict()</code><br/><br/>
+         _- the __dict__ constructor function_ <br/><br/>
+            <code>dict_c = dict([])</code><br/><br/>
+         _- __casting__ a list to the dictionary __data type__ with the __dict__ constructor function_ "
+
+    - heading: 16.Create a Complex data type (Record)
+    - body: "We are going to create __an item of data that holds other data__ (that also have their own data types). We will create a dictionary for the student's pets where each pet is also represented by a dictionary.\n All the information on the pets we will use are available at the <a href='#top'>top of the page</a>.
+
+        * define dictionary _pet1_\n
+        * add element _type_ with corresponding value\n
+        * add element _name_ with corresponding value\n
+        * define dictionary _pet2_\n
+        * add element _type_ with corresponding value\n
+        * add element _name_ with corresponding value\n
+        * define _pets_ dictionary using curly braces setting key-value pairs where<br/>
+        -  the key \"pet1\" is associated the dictionary pet1<br/>
+        -  the key \"pet2\" is associated the dictionary pet2. \n
+        * inspect the _pets_ dictionary
+        "
+
+    - heading: 17.Define a dictionary using the dict() Constructor
+    - body: "With dictionaries we can store items of data that are related but have different (their own) data types
+            <br/><br/>
+            run the following line of code
+            <br/><br/>
+            <code>album = dict( released=2017, artist=\"Kendrick Lamar\", name=\"Damn\", singles=[ \"Crumble\", \"Loyalty\", \"Love\" ],
+            accolades={\"Grammy\":\"Best Rap Album\", \"RIAA\":\"Triple Platinum\", \"Pulitzer\":\"Pulitzer Prize for Music\"} )</code><br/><br/>
+         __note:__ keywords are not __string literals__ and we are using equal (__=__) rather than colon (__:__) for assignment<br/><br/>
+         run the following lines of code to inspect the data<br/><br/>
+            <code>print( type( album[\"artist\"] ) )</code><br/><br/>
+
+            <code>print( type( album[\"released\"] ) )</code><br/><br/>
+
+            <code>print( type( album[\"singles\"] ) )</code><br/><br/>
+
+            <code>print( type( album[\"accolades\"] ) )</code><br/><br/>
+         __note:__ we are still accessing each item in the dictionary using the keys as we have always done before. "
+
+    - heading: 18.Update a Complex data type (Record)
+    - body: "We are going to update an entry that may not be accurate in the dictionary defined in the previous step.
+
+        * Identify the dictionary entry that has the erroneous data\n
+        * Write some code to print out the entry\n
+        * Write some code to update the entry with the correct data\n
+        * Write some code to print out the updated entry\n
+        * Write some code to print out the updated dictionary
+        "
+
+    - heading: 19.Define \"arsenal\" dictionary using the dict() Constructor
+    - body: Write some code to create the arsenal dictionary using the dict() constructor.
+        Use the information on arsenal already available at the <a href='#top'>top of the page</a>.
+
+    - heading: 20.Removing an entry using the dictionary pop() method
+    - body: The Python dict has several built in methods, __pop()__ is just one of them. pop() can be a usefully alternative to ___del___ _statement_ for removing an element.
+
+        <br/><br/>
+        Executing pop() __Returns__ a value which can be __captured__ as in the code below.
+        <br/><br/>
+        <code>pop_item = dictionary.pop(key, default)</code>
+        <br/><br/>
+        _-this is the syntax for using pop() where the __Parameter__ __default__ is optional_.
+        <br/><br/>
+
+    - heading: 21.Use the pop() method to remove "stadium" entry from arsenal dictionary
+    - body: run the following code
+        <br/><br/>
+        <code>print( arsenal )</code>
+        <br/><br/>
+        <code>pop_item = arsenal.pop("stadium")</code>
+        <br/><br/>
+        <code>print( pop_item )</code>
+        <br/><br/>
+        <code>print( arsenal )</code>
+
+        <br/><br/>
+        Now run the following code
+        <br/><br/>
+        <strong>note:</strong>we have added a string for the optional <i>default parameter</i>
+
+        <br/><br/>
+        <code>pop_item = arsenal.pop("stadium", "item not found message")</code>
+        <br/><br/>
+        <code>print( pop_item )</code>
+
+    - heading: 22.Verifying an entry exists in a dictionary
+    - body: We can do this by checking if the _key_ already exists using the __in__ keyword with following syntax.
+
+        <br/><br/>
+        <code> key <strong>in</strong> dictionary </code>
+
+        <br/><br/>
+        _A __boolean__ value is __returned___.
+
+    - heading: 23.Verify the stadium entry no longer exists in the arsenal dictionary
+    - body: Write some code to print out the return value for checking the existence of a stadium entry using the __in__ keyword.

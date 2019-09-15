@@ -1,0 +1,241 @@
+# markup in the intro and description
+# markdown in the body
+# gist script tag in the body
+# Reference here
+# https://kramdown.gettalong.org/quickref.html
+# https://learnxinyminutes.com/docs/yaml/
+# https://pmarsceill.github.io/just-the-docs/docs/utilities
+# https://www.webfx.com/tools/emoji-cheat-sheet/
+# liquid cheat sheet
+# https://gist.github.com/ryerh/b2fa73829f1b7b1c39988f09a65eb227
+
+
+image: "https://i.imgur.com/KzADa0ql.jpg"
+
+description: |
+    In Python <strong>String literals</strong> are any <em>Character</em> or sets of characters enclosed within either single or double quotes (single quotes are more commonly used in python).
+    A <strong>Character</strong> can be any <i>symbol</i> which can be <i>alphanumeric</i>(4), <i>punctuation</i>(:) or a <i>space</i> (' ').
+    A double quoted string literal can contain single quotes without without the need to <i>escape</i> it and likewise single quoted string can contain double quotes.
+
+
+intro: |
+    <ul>
+        <li>We can look at strings as a container for data.
+        </li>
+        <li>We could <em>extract the data</em> from the string.
+        </li>
+        <li>We could <em>manipulate</em> the string, changing the data.
+        </li>
+        <li>We could <em>convert the data</em> to other data types and use it for other applications.
+        </li>
+        <li>We could also <em>convert other data types to strings</em> and store the data.
+        </li>
+    </ul>
+# <ul>
+#     <li><em></em></li>
+#     <li><i></i></li>
+#     <li><strong></strong></li>
+# </ul>
+
+sections:
+    - heading: 1.How many characters are in a string?
+    - body:
+        - text: using the _builtin_ __len()__ function we can we can __count__ the number of characters in our string
+        - text: run the following lines of code
+        - code: |
+
+            sq_message = 'This won\'t take long'
+            dq_message = "This won't take long"
+
+            print( len( sq_message ) )
+            print( len( dq_message ) )
+
+        - text: _- we are printing the __return value__ when we execute the function with a __string input___
+
+
+    - heading: 2.Compare the strings
+    - body:
+        - text: Both strings above hold the same data
+        - text: '* Write some code to check if the value of __sq_message__ is equal to the value of __dq_message__.'
+        - text: '* Write some code to check if the character length of __sq_message__ is equal to the character length of __dq_message__.'
+
+    - heading: 3.Access a character within a string
+    - body:
+        - text: Each character in a string is indexed as in an array.
+        - text: We can access each character using square brackets ([ ])
+        - text: run the following lines of code
+        - code: |
+
+            print( sq_message[0] )
+            print( sq_message[1] )
+            print( sq_message[2] )
+            print( sq_message[3] )
+
+    - heading: 4.Accessing a sequence of characters by Slicing.
+    - body:
+        - text: We can use the following syntax to return a range of characters (__substring__) by specifying the __start__ index and the __stop__ index, separated by a colon (:).
+        - code: |
+
+                data_string[start:stop]
+
+        - text: _- __note:__ the first index is inclusive and the second index is not_
+
+        - text: We can can also return __all characters from the string__ using the following syntax
+        - code: |
+
+                data_string[:]
+        - text: We can can return __all characters from index _4_ to the _end___ of the string using the following syntax
+        - code: |
+
+                data_string[4:]
+        - text: We can can return __all characters from the _start_ to index _4___ of the string using the following syntax
+        - code: |
+
+                data_string[:5]
+
+    - heading: 5.Access substrings
+    - body:
+        - text: Write some code to print out the following string from the proceeding data string using slicing technique.
+        - text: You can use the plus (+) mathematical operator to __concatenate__ _two substrings into one_. You can also use it to chain strings to form longer strings.
+        - code: |
+
+                'So did i do woody choppy poop'
+        - code: |
+
+                data_string = 'Poopy-di scoop Scoop-diddy-whoop'
+
+    - heading: 6.Verify a substring exists in a string
+    - body:
+        - text: run the following code
+        - code: |
+
+                print( 'diddy' in data_string )
+
+        - text: We are using the __in__ keyword statement
+        - text: Conversely we could also use __not in__ keyword statement to verify the _absence of a substring_
+
+    - heading: 7.Finding the index of a character
+    - body:
+        - text: We can use the following syntax to return the index
+        - code: |
+
+                data_string.index(value, start, stop)
+
+        - text:
+                <dl>
+                    <dt><strong>value</strong></dt>
+                    <dd><em>Required.</em> The value to search for</dd>
+                    <dt><strong>start</strong></dt>
+                    <dd><em>Optional.</em> Where to start the search. Default is 0</dd>
+                    <dt><strong>stop</strong></dt>
+                    <dd><em>Optional.</em> Where to end the search. Default is to the end of the string</dd>
+                </dl>
+
+    - heading: 8.Finding the index of a character not in a string
+    - body:
+        - text: run the following code
+        - code: |
+
+                message = 'Find the index'
+                print( message.index( 's' ) )
+
+        - text: _Python should __raise an exception___
+
+    - heading: 9.Find the index of a substring
+    - body:
+        - text: Write some code to find the index of _Scoop_ in the following string
+        - code: |
+
+                data_string = 'Poopy-di scoop Scoop-diddy-whoop'
+
+    - heading: 10.Substituting a substring using the string replace() method
+    - body:
+        - text: The _builtin_ string __replace()__ __method returns a copy of the string__ where all occurrences of a substring are replaced with another substring
+        - code: |
+
+                data_string.replace( old, new )
+
+        - text: It has an optional third parameter where you can limit the number of occurrences to be replaced
+
+    - heading: 11.Substitute a substring
+    - body:
+        - text: Write some code to substitute _oo_ with _xx_ in the following string, limiting it to the first three occurrences
+        - code: |
+
+                data_string = 'Poopy-di scoop Scoop-diddy-whoop'
+
+    - heading: 12.Using the str() Constructor function
+    - body:
+        - text: The _builtin_ __str()__ constructor function converts the specified value into a string.
+                It __returns__ the "informal" or nicely printable representation of a given __object__.
+        - code: |
+
+                str(object)
+
+        - text: _- syntax for usage_
+        - code: |
+
+                str(object, encoding, errors)
+
+        - text: _- syntax for usage with the two optional parameters_
+
+        - text:
+                <dl>
+                    <dt><strong>object</strong></dt>
+                    <dd><em>Required.</em> Any object to be converted into a string</dd>
+                    <dt><strong>encoding</strong></dt>
+                    <dd><em>Optional.</em> The encoding of the object. Default is UTF-8</dd>
+                    <dt><strong>errors</strong></dt>
+                    <dd><em>Optional.</em> Specifies the response when encoding fails</dd>
+                </dl>
+
+        - text:
+                <blockquote>
+                    <strong>errors:</strong> we can set this to any of the following three response types (three other possible settings not listed)
+                    <ul>
+                        <li>
+                        <em>strict (default)</em> - response which raises a UnicodeDecodeError exception on failure
+                        </li>
+                        <li>
+                        <em>ignore</em> - ignores the unencodable unicode from the result
+                        </li>
+                        <li>
+                        <em>replace</em> - replaces the unencodable unicode to a question mark ?
+                        </li>
+                    </ul>
+                </blockquote>
+
+
+    - heading: 13.Concatenate strings with other data types
+    - body:
+        - text: Write some code to combine the following variables to print out the logical resultant statements.
+        - code: |
+
+                n1 = 10
+                n2 = 12
+                n3 = 0.625
+                s1 = 'the square root of 144 is '
+                s2 = '100 divided by 10 is '
+                s3 = '120 is a product of multiplying '
+                s4 = '5 divided by 8 is '
+
+
+    - heading: 14.Slicing using the third parameter
+    - body:
+        - text: 'String slicing accepts a third parameter that specifies the _stride_ or _step_
+        of characters to move forward after the first character is retrieved from the string.
+        Omitting the third parameter is the equivalent of setting the parameter to 1 which means
+        each character between the two (start, stop) indexes is retrieved.'
+
+        - code: |
+
+                data_string[start:stop:step]
+
+
+    - heading: 15.Slice to extract the data
+    - body:
+        - text: Write some code to reveal the encoded message within the following string
+
+        - code: |
+
+            message = 'point your steak chefs to the nutmeg'

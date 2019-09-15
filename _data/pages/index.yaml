@@ -2,27 +2,27 @@
 new_items:
 
     - item:
-      date: 2020-09-14
+      date: 2020-09-15
       heading: Get to know dictionaries
       description: 'This is a long exercise,
-        you will need jupyter setup to work through it in case you do not have enough time to complete in one sitting.
+        you will need jupyter setup to work through it, in case you do not have enough time to complete in one sitting.
         Enjoy!'
       page: &base
         link: section/working-with-dictionaries
 
     - item:
-      date: 2020-09-13
+      date: 2020-09-15
       heading: A strings refresher
       description: Quick walk through on strings with some introduction to applying the the techniques.
       page:
         link: section/working-with-strings
 
-    - item:
-      date: 2020-09-12
-      heading: Sample data
-      description: A walk through
-      page:
-        link: section/working-with-strings
+    # - item:
+    #   date: 2020-09-12
+    #   heading: Sample data
+    #   description: A walk through
+    #   page:
+    #     link: section/working-with-strings
 
 big_button:
   <<: *base
