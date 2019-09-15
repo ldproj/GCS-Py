@@ -1,0 +1,35 @@
+---
+layout: page
+---
+
+<!-- pull in the yaml data -->
+{% assign data_pointer = page.content_data %}
+{% assign pg_data = site.data.sections[data_pointer] %}
+{% assign desc =  pg_data.description %}
+{% assign intro =  pg_data.intro %}
+{% assign sections = pg_data.sections %}
+
+<!-- default marker -->
+<div id="top"></div>
+
+<!-- image if available in yaml-->
+{% include header-image.html pg_data=pg_data %}
+
+<!-- page title -->
+{% include page-title.html %}
+
+<!-- page description -->
+{% include page-description.html desc=desc %}
+
+<!-- exercise intro -->
+{% include page-intro.html intro=intro %}
+
+<!-- page content from markdown -->
+<div>
+    <p>{{ content }}</p>
+</div>
+
+<!-- end message above the footer -->
+<div markdown="span" class="fw-700 text-purple-100 mp-lg-4" style="float: right">
+    :shipit: :bomb: :boom: that's it, Well done! :sparkles: :star: :sparkles:
+</div>

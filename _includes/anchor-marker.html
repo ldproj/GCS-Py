@@ -1,0 +1,29 @@
+<div markdown="span" class="fs-3 fw-500 text-purple-100" style="float: right" id="{{ current_id }}">
+    {%- assign show = " " -%}
+    {%- assign hide = "style='display: none'" -%}
+
+    {%- if last -%}
+    {%- assign down = hide -%}
+    {%- assign up = hide -%}
+    {%- assign forward = hide -%}
+    {%- assign top = show -%}
+    {%- else -%}
+    {%- assign down = show -%}
+    {%- assign up = show -%}
+    {%- assign forward = show -%}
+    {%- assign top = hide -%}
+    {%- endif -%}
+
+    {%- if up_link == 0 -%}
+    {%- assign up = hide -%}
+    {%- endif -%}
+
+
+    <a {{ forward }} href="#{{ current_link }}">:arrow_forward:</a>
+    <!-- <a {{ divider }}> </a> -->
+    <a {{ up }} href="#{{ up_link }}">:arrow_up:</a>
+
+    <a {{ down }} href="#{{ down_link }}">:arrow_down:</a>
+
+    <a {{ top }} href="#top">:top:</a>
+</div>
