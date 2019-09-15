@@ -6,5 +6,7 @@ has_children: true
 permalink: /sections
 ---
 
-table of content will be auto generated here from section pages
-{: .fs-3 .text-grey-dk-000 }
+{% assign desc='Bite-size breakout of programming topics.' %}
+
+{{ desc }}
+{: .fs-5 .text-green-300}
