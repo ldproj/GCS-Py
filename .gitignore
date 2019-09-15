@@ -1,7 +1,9 @@
 _site
+_drafts
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.bak
 vendor
 # Byte-compiled / optimized / DLL files
 __pycache__/

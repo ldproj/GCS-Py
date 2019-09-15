@@ -1,0 +1,13 @@
+<div style="display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: flex-start;
+align-content: space-between;">
+    <div markdown="span" class="fs-1 text-grey-dk-000">
+        {{ item['date'] | date: "%d-%m-%Y" }}
+    </div>
+    <div markdown="span" class="mx-3">
+        [{{ item['heading'] }}]({{site.baseurl}}{{ item['page'].link }})
+    </div>
+</div>
