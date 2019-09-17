@@ -25,10 +25,10 @@ NEW
 {: .label .label-green }
 {% assign heading=items[0]['heading'] %}
 {{ heading }}
-{: .fs-8 .text-blue-200}
+{: .fs-8 .text-purple-200}
 {% assign description=items[0]['description'] %}
 {{ description }}
-{: .fs-4 .text-blue-100}
+{: .fs-4 .text-blue-200}
 
 <!--
 add the big button
