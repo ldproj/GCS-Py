@@ -24,12 +24,14 @@ layout: page
 <!-- exercise intro -->
 {% include page-intro.html intro=intro %}
 
-<!-- page content from markdown -->
-<div>
+<!-- add page content from data yaml -->
+{% include section-content.html sections=sections %}
+
+<!-- <div>
     <p>{{ content }}</p>
-</div>
+</div> -->
 
 <!-- end message above the footer -->
-<div markdown="span" class="fw-700 text-purple-100 mp-lg-4" style="float: right">
+<div class="fw-700 text-purple-100 mp-lg-4" markdown="span" style="float: right">
     :shipit: :bomb: :boom: that's it, Well done! :sparkles: :star: :sparkles:
 </div>

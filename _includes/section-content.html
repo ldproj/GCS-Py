@@ -1,0 +1,33 @@
+<!-- this is the layout for the actual content that would normally go in the page MD -->
+{% for section in sections %}
+
+    {%- assign to_go = forloop.rindex -%}
+
+    {% if section.heading %}
+        {%- comment -%} logic for wiring the anchor tags for navigation {%- endcomment -%}
+        {%- assign current = forloop.index | divided_by: 2 -%}
+        {%- assign current_id = current | plus: 1 -%}
+        {%- assign current_link = current | plus: 1 -%}
+        {%- assign up_link = current -%}
+        {%- assign down_link = current | plus: 2 -%}
+
+        {%- if to_go == 2 -%}
+            {%- assign last = true -%}
+        {%- endif -%}
+
+        {%- comment -%} add anchor tag for each section {%- endcomment -%}
+        {% include anchor-marker.html current_id=current_id current_link=current_link up_link=up_link down_link=down_link last=last  %}
+
+        {%- comment -%}add heading {%- endcomment -%}
+        {% assign heading = section.heading %}
+        {% include item-heading.html heading=heading %}
+
+    {% endif %}
+
+    {%- comment -%} add body for each section {%- endcomment -%}
+    {%- if section.body -%}
+        {% assign item = section %}
+        {% include item-body.html item=item %}
+    {%- endif -%}
+
+{% endfor %}

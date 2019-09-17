@@ -1,13 +1,17 @@
-{% for node in item["body"] %}
+<div markdown="span">
+    {% for node in item["body"] %}
 
-{%- if node["text"] -%}
-> {{ node["text"] }}
-{: .fs-2 }
-{%- endif -%}
+        {%- if node["text"] -%}
+            <div class="fs-2">
+                <blockquote>{{ node["text"] | markdownify }}</blockquote>
+            </div>
+        {%- endif -%}
 
-{% if node["code"] %}
-{%- assign code = node["code"] -%}
-{%- include code-block.html code=code -%}
-{% endif %}
+        {% if node["code"] %}
+            {%- assign code = node["code"] -%}
+            {%- include code-block.html code=code -%}
+        {% endif %}
 
-{% endfor %}
+    {% endfor %}
+
+</div>
