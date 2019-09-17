@@ -1,0 +1,41 @@
+a.tooltips {
+    position: relative;
+    display: inline;
+}
+a.tooltips:hover {
+    cursor: help;
+}
+a.tooltips span {
+    position: absolute;
+    width: auto;
+    color: #4A4AFF;
+    text-shadow: 1px 1px 1px #F4F4F4;
+    background: #ffffff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 4px;
+    box-shadow: 2px 1px 1px #F2F2F2;
+}
+a.tooltips span:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0; height: 0;
+    border-bottom: 8px solid #FFFFFF;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.8;
+    top: 30px;
+    left: 50%;
+    margin-left: -76px;
+    z-index: 999;
+    overflow-wrap: initial;
+    width: 200px;
+}

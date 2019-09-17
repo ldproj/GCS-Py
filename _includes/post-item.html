@@ -8,6 +8,8 @@ align-content: space-between;">
         {{ item['date'] | date: "%d-%m-%Y" }}
     </div>
     <div markdown="span" class="mx-3">
-        [{{ item['heading'] }}]({{site.baseurl}}{{ item['page'].link }})
+        <!-- [{{ item['heading'] }}]( {{site.baseurl}}{{ item['page'].link }} "{{ item['description'] }}" ){: .tooltips} -->
+        <a href="{{site.baseurl}}{{ item['page'].link }}"
+            class="tooltips">{{ item['heading'] }}<span>{{ item['description'] }}</span></a>
     </div>
 </div>
