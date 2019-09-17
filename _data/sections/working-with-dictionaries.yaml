@@ -182,6 +182,7 @@ sections:
     - body:
         - text: "We are going to update an entry that may not be accurate in the dictionary defined in the previous step.
 
+        * Inspect the album dictionary\n
         * Identify the dictionary entry that has the erroneous data\n
         * Write some code to print out the entry\n
         * Write some code to update the entry with the correct data\n
